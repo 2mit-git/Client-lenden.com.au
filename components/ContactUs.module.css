@@ -1,0 +1,195 @@
+.section {
+  background-color: var(--surface-dim);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--epicurean-maroon);
+  border: 1px solid var(--border-divider);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.formContainer {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.formContainer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--epicurean-maroon);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border-divider);
+  border-radius: 8px;
+  background-color: var(--cream-surface);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--epicurean-maroon);
+}
+
+.submitBtn {
+  background-color: var(--epicurean-maroon);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactInfo, .socialBox {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.socialBox {
+  background-color: var(--text-primary);
+  color: var(--white);
+}
+
+.contactInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--epicurean-maroon);
+}
+
+.socialBox h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.socialBox p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoList li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.infoList strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.infoList p {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--golden-accent);
+  border-color: var(--golden-accent);
+  color: var(--text-primary);
+}

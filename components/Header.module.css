@@ -1,0 +1,78 @@
+.header {
+  background-color: var(--text-primary);
+  color: var(--white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-family: var(--font-noto-serif), serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--golden-accent);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover, .nav a.active {
+  color: var(--golden-accent);
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.newBadge, .popularBadge {
+  font-size: 0.6rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.newBadge {
+  background-color: transparent;
+  border: 1px solid var(--golden-accent);
+  color: var(--golden-accent);
+}
+
+.popularBadge {
+  background-color: var(--golden-accent);
+  color: var(--text-primary);
+}
+
+.loginBtn {
+  background-color: var(--white);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.loginBtn:hover {
+  background-color: var(--surface-dim);
+}

@@ -1,0 +1,110 @@
+.section {
+  position: relative;
+  background-color: #4a151b; /* Matches the quality section background to blend */
+  padding-top: 4rem;
+}
+
+.container {
+  background-color: var(--white);
+  color: var(--text-primary);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--epicurean-maroon);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryBtn, .secondaryBtn, .secondaryBtnBg {
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.primaryBtn {
+  background-color: var(--golden-accent);
+  color: var(--text-primary);
+  border: none;
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--epicurean-maroon);
+  border: 1px solid var(--epicurean-maroon);
+}
+
+.secondaryBtnBg {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.primaryBtn:hover, .secondaryBtn:hover, .secondaryBtnBg:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.bgWrapper {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.bgFallback {
+  position: absolute;
+  inset: 0;
+  background-color: #5c2f21; /* Brownish fallback */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(96,26,36,0.9) 0%, rgba(96,26,36,0.4) 100%);
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  z-index: 1;
+}
+
+.bgTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.bgSubtitle {
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.bgActions {
+  display: flex;
+  gap: 1rem;
+}

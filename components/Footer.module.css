@@ -1,0 +1,103 @@
+.footer {
+  background-color: var(--epicurean-maroon);
+  color: var(--white);
+  padding-top: 5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.brand {
+  padding-right: 2rem;
+}
+
+.logo {
+  font-family: var(--font-noto-serif), serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--golden-accent);
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.newsletter h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.1);
+  color: var(--white);
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--golden-accent);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--golden-accent);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.linksCol h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.linksCol ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linksCol a {
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s ease;
+}
+
+.linksCol a:hover {
+  color: var(--golden-accent);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.875rem;
+}
