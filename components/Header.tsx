@@ -22,7 +22,7 @@ export default function Header() {
           <Link href="/#home" className={styles.active}>Home</Link>
           <Link href="/#products">Shop</Link>
           <Link href="/poultry">Poultry</Link>
-          <Link href="/seafood-meats">Seafood/Meats</Link>
+          <Link href="/seafood">Seafood/Meats</Link>
           <Link href="/lenden-epicurean" className={styles.highlight}>Lenden Epicurean <span className={styles.newBadge}>NEW</span></Link>
           <Link href="/#locations">Locations <span className={styles.popularBadge}>POPULAR</span></Link>
           <Link href="/events">Events</Link>
