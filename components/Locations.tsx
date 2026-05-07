@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { useState } from 'react';
+import { MdRestaurantMenu, MdSetMeal, MdDiamond, MdLocationOn, MdPhone, MdAccessTime, MdWaterDrop, MdEmojiEvents, MdPeople, MdLocalOffer } from 'react-icons/md';
 import styles from './Locations.module.css';
 
 const locations = [
@@ -13,15 +14,15 @@ const locations = [
     address: 'Greenwood Plaza, 1/36 Blue St, North Sydney, NSW 2060',
     phone: '+61 2 9959 4508',
     specialty: 'Premium beef, chicken, and lamb products',
-    specialtyIcon: '🥩',
+    specialtyIcon: <MdRestaurantMenu />,
     hours: [
-      { days: 'Mon-Fri:', time: '7:00 AM – 7:00 PM' },
-      { days: 'Saturday:', time: '8:00 AM – 3:00 PM' },
+      { days: 'Mon-Fri:', time: '7:00 AM - 7:00 PM' },
+      { days: 'Saturday:', time: '8:00 AM - 3:00 PM' },
       { days: 'Sunday:', time: 'Closed' },
     ],
     image: '/shop_card.png',
     mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.5766!2d151.2066!3d-33.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3b1b234567%3A0x1a2b3c4d5e6f7890!2sGreenwood%20Plaza%2C%20North%20Sydney!5e0!3m2!1sen!2sau!4v1683000000000',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.266537012329!2d151.20512017596404!3d-33.84037637254654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aef301875975%3A0xb310db3dd13d117f!2sLenden%20Poultry!5e0!3m2!1sen!2sau!4v1711951000000!5m2!1sen!2sau',
     linkLabel: 'Visit Lenden Poultry for premium meat products',
     isOpen: false,
   },
@@ -32,17 +33,17 @@ const locations = [
     badgeColor: '#1A4A6E',
     shopName: 'Seafood North Sydney',
     address: 'Greenwood Plaza, 1/36 Blue St, North Sydney, NSW 2060',
-    phone: '+51 466 273 523',
+    phone: '+61 466 273 623',
     specialty: 'Fresh seafood and premium fish products',
-    specialtyIcon: '🐟',
+    specialtyIcon: <MdSetMeal />,
     hours: [
-      { days: 'Mon-Fri:', time: '7:00 AM – 7:00 PM' },
-      { days: 'Saturday:', time: '8:00 AM – 3:00 PM' },
+      { days: 'Mon-Fri:', time: '7:00 AM - 7:00 PM' },
+      { days: 'Saturday:', time: '8:00 AM - 3:00 PM' },
       { days: 'Sunday:', time: 'Closed' },
     ],
     image: '/featured_meat.png',
     mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.5766!2d151.2066!3d-33.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3b1b234567%3A0x1a2b3c4d5e6f7890!2sGreenwood%20Plaza%2C%20North%20Sydney!5e0!3m2!1sen!2sau!4v1683000000001',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.247258767373!2d151.2046335!3d-33.8399038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12afb0c584b443%3A0xd805675fc042cddd!2sLenden%20Seafood!5e0!3m2!1sen!2sau!4v1711952000000!5m2!1sen!2sau',
     linkLabel: 'Visit Seafood North Sydney for fresh seafood products',
     isOpen: false,
   },
@@ -52,14 +53,14 @@ const locations = [
     badge: 'SEAFOOD NORTHBRIDGE',
     badgeColor: '#1A4A6E',
     shopName: 'Lenden Seafood Northbridge',
-    address: 'Shop 29/79-113 Sailors Bay Rd, Northbridge NSW 2063, Australia',
+    address: 'Shop 29/79/113 Sailors Bay Rd, Northbridge NSW 2063, Australia',
     phone: '+61 2 9958 0974',
     specialty: 'Premium seafood and luxury marine delicacies',
-    specialtyIcon: '👑',
-    hours: [{ days: 'Monday – Sunday:', time: '7:00 AM – 6:30 PM' }],
+    specialtyIcon: <MdDiamond />,
+    hours: [{ days: 'Monday - Sunday:', time: '7:00 AM - 6:30 PM' }],
     image: '/shop_card.png',
     mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313!2d151.2100!3d-33.8130!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae401234!2sNorthbridge%20NSW!5e0!3m2!1sen!2sau!4v1683000000002',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.1234567!2d151.2064871!3d-33.8099494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aeca6f520f99%3A0x3ef8db61459e6bf4!2sLenden%20seafood%20Northbridge!5e0!3m2!1sen!2sau!4v1711953000000!5m2!1sen!2sau',
     linkLabel: 'Visit Lenden Seafood Northbridge for luxury seafood selection',
     isOpen: false,
   },
@@ -72,15 +73,15 @@ const locations = [
     address: 'Greenwood Plaza, North Sydney NSW 2060, Australia',
     phone: '+61 2 9959 4508',
     specialty: 'Freshly rotisserie-roasted chicken & gourmet sides',
-    specialtyIcon: '🍗',
+    specialtyIcon: <MdRestaurantMenu />,
     hours: [
-      { days: 'Mon-Fri:', time: '10:00 AM – 7:00 PM' },
-      { days: 'Saturday:', time: '9:00 AM – 5:00 PM' },
-      { days: 'Sunday:', time: '10:00 AM – 4:00 PM' },
+      { days: 'Mon-Fri:', time: '10:00 AM - 7:00 PM' },
+      { days: 'Saturday:', time: '9:00 AM - 5:00 PM' },
+      { days: 'Sunday:', time: '10:00 AM - 4:00 PM' },
     ],
     image: '/hero_bg.png',
     mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.5766!2d151.2066!3d-33.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3b1b234567%3A0x1a2b3c4d5e6f7890!2sGreenwood%20Plaza%2C%20North%20Sydney!5e0!3m2!1sen!2sau!4v1683000000003',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.266537012329!2d151.20512017596404!3d-33.84037637254654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aef301875975%3A0xb310db3dd13d117f!2sLenden%20Poultry!5e0!3m2!1sen!2sau!4v1711951000000!5m2!1sen!2sau',
     linkLabel: 'Visit Lenden Rotisserie for freshly roasted chicken',
     isOpen: true,
   },
@@ -91,10 +92,11 @@ export default function Locations() {
   const active = locations[activeIndex];
 
   return (
-    <section className={`section-padding ${styles.section}`}>
+    <section className={`section-padding ${styles.section}`} id="locations">
       <div className="container">
         {/* Header */}
         <div className={styles.header}>
+          <span className={styles.badge}>FIND US</span>
           <h2 className={styles.title}>Our Locations</h2>
           <p className={styles.subtitle}>
             Visit our specialized shops for{' '}
@@ -130,7 +132,7 @@ export default function Locations() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={`Map – ${active.shopName}`}
+                title={`Map - ${active.shopName}`}
               />
             </div>
 
@@ -143,7 +145,7 @@ export default function Locations() {
                     onClick={() => setActiveIndex(i)}
                   >
                     <span className={styles.shopLinkIcon}>
-                      {i === 0 ? '🍖' : i === 1 ? '🐚' : i === 2 ? '👑' : '🍗'}
+                      {i === 0 ? <MdRestaurantMenu /> : i === 1 ? <MdSetMeal /> : i === 2 ? <MdDiamond /> : <MdRestaurantMenu />}
                     </span>
                     <span>{loc.linkLabel}</span>
                   </button>
@@ -174,11 +176,11 @@ export default function Locations() {
               <h3 className={styles.shopName}>{active.shopName}</h3>
 
               <p className={styles.infoRow}>
-                <span className={styles.infoIcon}>📍</span>
+                <span className={styles.infoIcon}><MdLocationOn size={18} /></span>
                 {active.address}
               </p>
               <p className={styles.infoRow}>
-                <span className={styles.infoIcon}>📞</span>
+                <span className={styles.infoIcon}><MdPhone size={18} /></span>
                 {active.phone}
               </p>
               <p className={styles.infoRow}>
@@ -188,7 +190,7 @@ export default function Locations() {
 
               <div className={styles.hoursBlock}>
                 <p className={styles.hoursLabel}>
-                  <span className={styles.infoIcon}>🕐</span>
+                  <span className={styles.infoIcon}><MdAccessTime size={18} /></span>
                   Business Hours:
                 </p>
                 <ul className={styles.hoursList}>
@@ -199,6 +201,28 @@ export default function Locations() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Visit Section */}
+        <div className={styles.whyVisit}>
+          <h3 className={styles.whyVisitTitle}>Why Visit Our Stores?</h3>
+          <div className={styles.whyVisitGrid}>
+            <div className={styles.whyCard}>
+              <div className={styles.whyIcon}><MdEmojiEvents /></div>
+              <h4 className={styles.whyTitle}>Premium Selection</h4>
+              <p className={styles.whyDesc}>Hand-picked premium cuts not available at regular supermarkets</p>
+            </div>
+            <div className={styles.whyCard}>
+              <div className={styles.whyIcon}><MdPeople /></div>
+              <h4 className={styles.whyTitle}>Expert Advice</h4>
+              <p className={styles.whyDesc}>Our skilled butchers can provide custom cuts to your specifications</p>
+            </div>
+            <div className={styles.whyCard}>
+              <div className={styles.whyIcon}><MdLocalOffer /></div>
+              <h4 className={styles.whyTitle}>Special Offers</h4>
+              <p className={styles.whyDesc}>In-store exclusive deals and seasonal specials</p>
             </div>
           </div>
         </div>

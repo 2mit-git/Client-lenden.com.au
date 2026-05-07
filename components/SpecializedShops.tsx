@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { MdStorefront, MdLocationOn, MdArrowForward, MdCheck } from 'react-icons/md';
 import styles from './SpecializedShops.module.css';
 
 type Shop = {
@@ -34,9 +35,9 @@ const shops: Shop[] = [
     name: 'Seafood North Sydney',
     desc: 'Our seafood market offers fresh fish and shellfish caught daily. Sustainably sourced from local waters.',
     img: '/featured_meat.png',
-    href: '/seafood-meats',
+    href: '/seafood',
     btnLabel: 'Visit North Sydney Shop',
-    tagLabel: 'Fresh Seafood',
+    tagLabel: 'Seafood Products',
     accentColor: 'navy',
     features: ['Fresh Fish', 'Premium Shellfish', 'Live Crustaceans', 'Prepared Items'],
   },
@@ -45,7 +46,7 @@ const shops: Shop[] = [
     name: 'Lenden Seafood Northbridge',
     desc: 'Our premium seafood collection features the finest selection of luxury seafood. Exclusively sourced and expertly curated.',
     img: '/shop_card.png',
-    href: '/seafood-meats',
+    href: '/premium',
     btnLabel: 'Visit Northbridge Shop',
     badge: 'NEW',
     badgeStyle: 'navy',
@@ -58,7 +59,7 @@ const shops: Shop[] = [
     name: 'Lenden Rotisserie',
     desc: 'Our premium rotisserie concept featuring perfectly roasted chicken, gourmet sides, and specialty items. Now open in Sydney!',
     img: '/hero_bg.png',
-    href: '/lenden-epicurean',
+    href: '/rotisserie',
     btnLabel: 'Visit Now',
     badge: 'NOW OPEN',
     badgeStyle: 'gold',
@@ -160,7 +161,7 @@ export default function SpecializedShops() {
                     {shop.features.map((f) => (
                       <div key={f} className={styles.featureItem}>
                         <span className={`${styles.checkCircle} ${styles[`checkCircle--${shop.accentColor}`]}`}>
-                          ✓
+                          <MdCheck />
                         </span>
                         <span className={styles.featureLabel}>{f}</span>
                       </div>
@@ -174,14 +175,14 @@ export default function SpecializedShops() {
                       className={`${styles.visitBtn} ${styles[`visitBtn--${shop.accentColor}`]}`}
                       aria-label={`Visit ${shop.name}`}
                     >
-                      🍖 {shop.btnLabel}
+                      <MdStorefront size={18} /> {shop.btnLabel}
                     </a>
                     <a
                       href={shop.href}
                       className={`${styles.arrowBtn} ${styles[`arrowBtn--${shop.accentColor}`]}`}
                       aria-label={`Go to ${shop.name}`}
                     >
-                      →
+                      <MdArrowForward size={20} />
                     </a>
                   </div>
                 </div>
@@ -189,6 +190,24 @@ export default function SpecializedShops() {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* ── Bottom CTA ───────────────────────────────────── */}
+        <motion.div
+          className={styles.ctaCard}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+        >
+          <h3 className={styles.ctaTitle}>Visit Our Specialized Shops</h3>
+          <p className={styles.ctaDesc}>
+            Visit our specialized shops including our upcoming rotisserie to explore our
+            complete range of premium products, get expert advice, and enjoy exclusive in-store offers
+          </p>
+          <a href="#locations" className={styles.ctaBtn}>
+            <MdLocationOn size={20} /> Find Our Locations
+          </a>
         </motion.div>
 
       </div>

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MdShoppingBag } from 'react-icons/md';
+import { MdShoppingBag, MdChevronLeft, MdChevronRight, MdStar, MdStarBorder, MdCheck, MdArrowForward } from 'react-icons/md';
 import styles from './FeaturedProducts.module.css';
 
 /* ── Slide data ──────────────────────────────────────────── */
@@ -84,9 +84,14 @@ const slideVariants = {
 
 /* ── Stars helper ────────────────────────────────────────── */
 function Stars({ count, theme }: { count: number; theme: string }) {
+  const stars = [];
+  for (let i = 0; i < 5; i++) {
+    if (i < count) stars.push(<MdStar key={i} />);
+    else stars.push(<MdStarBorder key={i} />);
+  }
   return (
-    <span className={`${styles.stars} ${styles[`stars--${theme}`]}`}>
-      {'★'.repeat(count)}{'☆'.repeat(5 - count)}
+    <span className={`${styles.stars} ${styles[`stars--${theme}`]}`} style={{ display: 'flex', alignItems: 'center' }}>
+      {stars}
     </span>
   );
 }
@@ -132,7 +137,7 @@ export default function FeaturedProducts() {
             onClick={() => go(current - 1)}
             aria-label="Previous slide"
           >
-            ❮
+            <MdChevronLeft size={24} />
           </button>
           <button
             id="carousel-next"
@@ -140,7 +145,7 @@ export default function FeaturedProducts() {
             onClick={() => go(current + 1)}
             aria-label="Next slide"
           >
-            ❯
+            <MdChevronRight size={24} />
           </button>
 
           {/* ── Slide ─────────────────────────────────────────── */}
@@ -204,7 +209,7 @@ export default function FeaturedProducts() {
                   <ul className={styles.featureList}>
                     {slide.features.map((f) => (
                       <li key={f} className={styles.featureItem}>
-                        <span className={`${styles.checkMark} ${styles[`checkMark--${slide.imageBadgeTheme}`]}`}>✓</span>
+                        <span className={`${styles.checkMark} ${styles[`checkMark--${slide.imageBadgeTheme}`]}`}><MdCheck size={16} /></span>
                         <span>{f}</span>
                       </li>
                     ))}
@@ -239,8 +244,8 @@ export default function FeaturedProducts() {
 
         {/* ── Bottom CTA ────────────────────────────────────── */}
         <div className={styles.bottomCta}>
-          <a href="/#products" className={styles.allProductsBtn}>
-            View All Products In Store →
+          <a href="/#products" className={styles.allProductsBtn} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+            View All Products In Store <MdArrowForward size={16} />
           </a>
         </div>
 

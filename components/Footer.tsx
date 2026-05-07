@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import { MdLink, MdKey, MdCircle, MdShoppingCart } from 'react-icons/md';
 
 const socialLinks = [
   { id: 'fb',  href: '#', label: 'Facebook',  svg: (
@@ -35,7 +36,7 @@ export default function Footer() {
           {/* Column 1 — Follow Us */}
           <div className={styles.col}>
             <h3 className={styles.colHeading}>
-              <span className={styles.colIcon}>🔗</span> Follow Us
+              <span className={styles.colIcon}><MdLink /></span> Follow Us
             </h3>
             <div className={styles.underline} />
 
@@ -48,8 +49,8 @@ export default function Footer() {
             </div>
 
             <div className={styles.brandTag}>
-              <span className={styles.keyIcon}>🔑</span>
-              <span className={styles.dotIcon}>🔵</span>
+              <span className={styles.keyIcon}><MdKey /></span>
+              <span className={styles.dotIcon}><MdCircle color="blue" size={10} /></span>
               <span className={styles.brandName}>LENDEN</span>
             </div>
 
@@ -58,24 +59,24 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2 — Our Products */}
+          {/* Column 2 - Our Products */}
           <div className={styles.col}>
             <h3 className={styles.colHeading}>
-              <span className={styles.colIcon}>🛒</span> Our Products
+              <span className={styles.colIcon}><MdShoppingCart /></span> Our Products
             </h3>
             <div className={styles.underline} />
             <ul className={styles.linkList}>
               <li><Link id="footer-link-poultry"     href="/poultry">Poultry Shop</Link></li>
-              <li><Link id="footer-link-nsydney"     href="/seafood-meats">Seafood North Sydney</Link></li>
-              <li><Link id="footer-link-northbridge" href="/seafood-meats">Seafood Northbridge</Link></li>
-              <li><Link id="footer-link-rotisserie"  href="/lenden-epicurean">Lenden Rotisserie</Link></li>
+              <li><Link id="footer-link-nsydney"     href="/seafood">Seafood North Sydney</Link></li>
+              <li><Link id="footer-link-northbridge" href="/premium">Seafood Northbridge</Link></li>
+              <li><Link id="footer-link-rotisserie"  href="/rotisserie">Lenden Rotisserie</Link></li>
             </ul>
           </div>
 
           {/* Column 3 — Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colHeading}>
-              <span className={styles.colIcon}>🔗</span> Quick Links
+              <span className={styles.colIcon}><MdLink /></span> Quick Links
             </h3>
             <div className={styles.underline} />
             <ul className={styles.linkList}>

@@ -1,32 +1,19 @@
-"use client";
-import { motion } from 'framer-motion';
 import styles from './ContactUs.module.css';
+import { MdEmail, MdPhone, MdAccessTime } from 'react-icons/md';
 
 export default function ContactUs() {
   return (
     <section className={`section-padding ${styles.section}`}>
       <div className="container">
-        <motion.div 
-          className={styles.header}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className={styles.header}>
           <span className={styles.badge}>GET IN TOUCH</span>
           <h2 className={styles.title}>Contact Us</h2>
-          <p className={styles.subtitle}>Have questions about our products or sourcing? We're here to help.</p>
-        </motion.div>
+          <p className={styles.subtitle}>Have questions about our products or services? We're here to help!</p>
+        </div>
         
         <div className={styles.grid}>
-          <motion.div 
-            className={styles.formContainer}
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3>Drop Us A Message</h3>
+          <div className={styles.formContainer}>
+            <h3>Send Us a Message</h3>
             <form className={styles.form}>
               <div className={styles.inputGroup}>
                 <label htmlFor="name">Name</label>
@@ -34,54 +21,49 @@ export default function ContactUs() {
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="Your email address" />
+                <input type="email" id="email" placeholder="Your email" />
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="subject">Subject</label>
                 <select id="subject">
                   <option>Select a subject</option>
                   <option>Product Inquiry</option>
-                  <option>Wholesale</option>
+                  <option>Order Status</option>
+                  <option>Feedback</option>
                   <option>Other</option>
                 </select>
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="message">Message</label>
-                <textarea id="message" rows={5} placeholder="How can we help?"></textarea>
+                <textarea id="message" rows={5} placeholder="Your message"></textarea>
               </div>
               <button type="button" className={styles.submitBtn}>Send Message</button>
             </form>
-          </motion.div>
+          </div>
           
-          <motion.div 
-            className={styles.infoContainer}
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div className={styles.infoContainer}>
             <div className={styles.contactInfo}>
               <h3>General Contact Information</h3>
               <ul className={styles.infoList}>
                 <li>
-                  <span className={styles.icon}>✉️</span>
+                  <span className={styles.icon}><MdEmail /></span>
                   <div>
-                    <strong>Email</strong>
-                    <p>contact@lendenepicurean.com</p>
+                    <strong>Email:</strong>
+                    <p>lendenptyltd@gmail.com</p>
                   </div>
                 </li>
                 <li>
-                  <span className={styles.icon}>📞</span>
+                  <span className={styles.icon}><MdPhone /></span>
                   <div>
-                    <strong>Phone</strong>
-                    <p>(555) 123-4567</p>
+                    <strong>Main Phone:</strong>
+                    <p>+61 2 9959 4508</p>
                   </div>
                 </li>
                 <li>
-                  <span className={styles.icon}>📍</span>
+                  <span className={styles.icon}><MdAccessTime /></span>
                   <div>
-                    <strong>Main Headquarters</strong>
-                    <p>123 Epicurean Ave, Culinary District, CA 90210</p>
+                    <strong>Customer Support Hours:</strong>
+                    <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
                   </div>
                 </li>
               </ul>
@@ -89,14 +71,15 @@ export default function ContactUs() {
             
             <div className={styles.socialBox}>
               <h3>Follow Us</h3>
-              <p>Stay updated with our latest arrivals and seasonal offers.</p>
+              <p>Connect with us on social media for news, recipes, and special offers</p>
               <div className={styles.socialLinks}>
-                <a href="#" className={styles.socialIcon}>IN</a>
                 <a href="#" className={styles.socialIcon}>FB</a>
+                <a href="#" className={styles.socialIcon}>IG</a>
                 <a href="#" className={styles.socialIcon}>TW</a>
+                <a href="#" className={styles.socialIcon}>YT</a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

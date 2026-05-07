@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { MdStore } from 'react-icons/md';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -19,18 +20,24 @@ export default function Header() {
           </Link>
         </div>
         <nav className={styles.nav}>
-          <Link href="/#home" className={styles.active}>Home</Link>
-          <Link href="/#products">Shop</Link>
-          <Link href="/poultry">Poultry</Link>
-          <Link href="/seafood">Seafood/Meats</Link>
-          <Link href="/lenden-epicurean" className={styles.highlight}>Lenden Epicurean <span className={styles.newBadge}>NEW</span></Link>
-          <Link href="/#locations">Locations <span className={styles.popularBadge}>POPULAR</span></Link>
-          <Link href="/events">Events</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/" className={styles.active}>Home</Link>
+          <Link href="/#products">Products</Link>
+          <Link href="/poultry">Poultry Shop</Link>
+          <Link href="/seafood">Seafood North Sydney</Link>
+          <Link href="/premium" className={styles.highlight}>
+            Seafood Northbridge <span className={styles.newBadge}>NEW</span>
+          </Link>
+          <Link href="/rotisserie" className={styles.highlight}>
+            Lenden Rotisserie <span className={styles.popularBadge}>NOW OPEN</span>
+          </Link>
+          <Link href="/#about">About Us</Link>
+          <Link href="/#quality">Quality</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
         <div className={styles.actions}>
-          <button className={styles.loginBtn}>Back to Home</button>
+          <Link href="/#locations" className={styles.loginBtn}>
+            <MdStore size={16} /> Visit Our Stores
+          </Link>
         </div>
       </div>
     </motion.header>

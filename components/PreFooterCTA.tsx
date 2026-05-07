@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './PreFooterCTA.module.css';
+import { MdLocationOn, MdPhone } from 'react-icons/md';
 
 export default function PreFooterCTA() {
   return (
@@ -25,11 +26,11 @@ export default function PreFooterCTA() {
         </p>
         <div className={styles.buttons}>
           <Link id="cta-find-stores" href="/#locations" className={styles.btnOutline}>
-            <span className={styles.btnIcon}>📍</span>
+            <span className={styles.btnIcon}><MdLocationOn size={18} /></span>
             Find Our Stores
           </Link>
           <Link id="cta-contact-us" href="/#contact" className={styles.btnOutline}>
-            <span className={styles.btnIcon}>📞</span>
+            <span className={styles.btnIcon}><MdPhone size={18} /></span>
             Contact Us
           </Link>
         </div>

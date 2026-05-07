@@ -320,3 +320,79 @@
 .arrowBtn:hover.arrowBtn--maroon { background: rgba(96,26,36,0.2); }
 .arrowBtn:hover.arrowBtn--navy   { background: rgba(26,74,110,0.2); }
 .arrowBtn:hover.arrowBtn--gold   { background: rgba(196,155,59,0.28); }
+
+/* ─── CTA Card ──────────────────────────────────────────────── */
+.ctaCard {
+  max-width: 720px;
+  margin: 4rem auto 0;
+  background: linear-gradient(135deg, var(--text-primary) 0%, rgba(96,26,36,0.9) 100%);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  text-align: center;
+  box-shadow: 0 8px 36px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 16rem; height: 16rem;
+  border-radius: 50%;
+  background: rgba(74,56,42,0.1);
+  transform: translate(50%, -50%);
+  pointer-events: none;
+}
+
+.ctaCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 16rem; height: 16rem;
+  border-radius: 50%;
+  background: rgba(96,26,36,0.3);
+  transform: translate(-50%, 50%);
+  pointer-events: none;
+}
+
+.ctaTitle {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-noto-serif), serif;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaDesc {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: var(--white);
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
