@@ -1,0 +1,82 @@
+/* ─── Section shell ──────────────────────────────────────── */
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ─── Dark maroon overlay ────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(75, 12, 22, 0.82);
+  z-index: 1;
+}
+
+/* ─── Content ────────────────────────────────────────────── */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* ─── Title ──────────────────────────────────────────────── */
+.title {
+  font-family: var(--font-noto-serif), serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+/* ─── Subtitle ───────────────────────────────────────────── */
+.subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 580px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+/* ─── Button row ─────────────────────────────────────────── */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Outline buttons ────────────────────────────────────── */
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.6rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btnOutline:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-color: #ffffff;
+}
+
+.btnIcon {
+  font-size: 0.95rem;
+}
