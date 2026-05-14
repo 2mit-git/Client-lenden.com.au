@@ -131,61 +131,6 @@ export default function ThemeEffects() {
           detectRetina: true,
         };
 
-      /* ─────────────── HALLOWEEN NIGHT ─────────────── */
-      case "halloween":
-        return {
-          fpsLimit: 60,
-          background: { color: { value: "transparent" } },
-          particles: {
-            color: { value: ["#FF6B00", "#FF8C00", "#CC3300", "#FF4500"] },
-            move: {
-              direction: "top",
-              enable: true,
-              outModes: { default: "out" },
-              random: true,
-              speed: { min: 0.3, max: 1.2 },
-              straight: false,
-            },
-            number: { density: { enable: true, width: 1920 }, value: 70 },
-            opacity: {
-              value: { min: 0.05, max: 0.35 },
-              animation: { enable: true, speed: 0.5, startValue: "random", sync: false },
-            },
-            shape: { type: "circle" },
-            size: { value: { min: 15, max: 50 } },
-          },
-          detectRetina: true,
-        };
-
-      /* ─────────────── NEW YEAR GALA ─────────────── */
-      case "newyear":
-        return {
-          fpsLimit: 60,
-          background: { color: { value: "transparent" } },
-          particles: {
-            color: { value: ["#FFD700", "#FFC0CB", "#00FFFF", "#FF00FF", "#FFFFFF", "#FF6B6B", "#98FB98"] },
-            move: {
-              direction: "bottom",
-              enable: true,
-              outModes: { default: "out" },
-              random: false,
-              speed: { min: 2, max: 6 },
-              straight: false,
-              gravity: { enable: true, acceleration: 3 },
-            },
-            number: { density: { enable: true, width: 1920 }, value: 200 },
-            opacity: { value: { min: 0.6, max: 1 } },
-            shape: { type: ["circle", "square"] },
-            size: { value: { min: 3, max: 9 } },
-            rotate: {
-              value: { min: 0, max: 360 },
-              direction: "random",
-              animation: { enable: true, speed: 15, sync: false },
-            },
-          },
-          detectRetina: true,
-        };
-
       default:
         return null;
     }
@@ -283,45 +228,7 @@ export default function ThemeEffects() {
         />
       )}
 
-      {/* Halloween: deep purple fog at bottom + eerie vignette */}
-      {activeTheme === "halloween" && (
-        <>
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              height: "45%",
-              background:
-                "linear-gradient(to top, rgba(18,0,34,0.85) 0%, rgba(61,0,107,0.4) 50%, transparent 100%)",
-              pointerEvents: "none",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(10,0,20,0.6) 100%)",
-              pointerEvents: "none",
-            }}
-          />
-        </>
-      )}
 
-      {/* New Year: dark vignette to make confetti pop */}
-      {activeTheme === "newyear" && (
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(0,0,0,0.4) 100%)",
-            pointerEvents: "none",
-          }}
-        />
-      )}
     </div>
   );
 }
