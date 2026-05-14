@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Serif } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "../context/ThemeContext";
+import ThemeEffects from "../components/ThemeEffects";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,7 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${notoSerif.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <ThemeProvider>
+          <ThemeEffects />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

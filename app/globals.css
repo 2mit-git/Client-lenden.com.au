@@ -7,6 +7,9 @@
   --border-divider: #E8E2D5;
   --surface-dim: #F4EFE6;
   --white: #ffffff;
+  --theme-glow: rgba(196, 155, 59, 0.3);
+  --theme-gradient-from: #FDF9EF;
+  --theme-gradient-to: #F4EFE6;
 }
 
 html {
@@ -26,6 +29,18 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s ease;
+}
+
+/* Smooth transitions on all CSS variables for themed elements */
+a, button, h1, h2, h3, h4, h5, h6, p, span, div {
+  transition:
+    color 0.45s ease,
+    background-color 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
