@@ -325,7 +325,7 @@
 .ctaCard {
   max-width: 720px;
   margin: 4rem auto 0;
-  background: linear-gradient(135deg, var(--text-primary) 0%, rgba(96,26,36,0.9) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, color-mix(in srgb, var(--epicurean-maroon) 90%, transparent) 100%);
   border-radius: 20px;
   padding: 3rem 3.5rem;
   text-align: center;

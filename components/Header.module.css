@@ -136,7 +136,7 @@
   position: absolute;
   top: calc(100% + 12px);
   right: 0;
-  background: linear-gradient(160deg, #ffffff 0%, #f9f5ee 100%);
+  background: var(--surface-card);
   border-radius: 16px;
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.18),
@@ -157,7 +157,7 @@
   gap: 0.75rem;
   padding: 0.65rem 0.8rem;
   border-radius: 10px;
-  color: #2D1216;
+  color: var(--text-on-card);
   background: transparent;
   transition: all 0.2s ease;
   width: 100%;
@@ -178,7 +178,7 @@
 }
 
 .themeOption:hover {
-  color: #601A24;
+  color: var(--epicurean-maroon);
 }
 
 .themeOption:hover::before {
@@ -188,7 +188,7 @@
 .activeThemeOption {
   background: linear-gradient(135deg, rgba(196,155,59,0.15) 0%, rgba(96,26,36,0.08) 100%) !important;
   font-weight: 700;
-  color: #601A24 !important;
+  color: var(--text-on-card) !important;
   box-shadow: 0 0 0 1.5px rgba(196,155,59,0.4);
 }
 

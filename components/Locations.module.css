@@ -139,7 +139,7 @@
 .shopLink:hover {
   border-color: var(--epicurean-maroon);
   color: var(--epicurean-maroon);
-  background-color: #fdf5f5;
+  background-color: var(--surface-dim);
 }
 
 .shopLinkActive {

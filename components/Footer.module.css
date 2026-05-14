@@ -1,6 +1,6 @@
 /* ─── Footer Shell ───────────────────────────────────────── */
 .footer {
-  background-color: #4A0F18;   /* deep maroon, matches reference */
+  background-color: var(--footer-bg);
   color: var(--white);
 }
 
