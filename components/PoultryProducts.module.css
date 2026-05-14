@@ -133,3 +133,12 @@
 .favBtn:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .header {
+    margin-bottom: 2rem;
+  }
+}

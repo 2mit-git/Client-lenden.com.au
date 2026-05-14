@@ -90,3 +90,15 @@
   font-size: 0.875rem;
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .header {
+    margin-bottom: 2rem;
+  }
+}

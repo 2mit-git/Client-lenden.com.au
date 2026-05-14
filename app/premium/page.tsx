@@ -14,28 +14,28 @@ import styles from './premium.module.css';
 
 /* ── Product data ──────────────────────────────────────────── */
 const products = [
-  { id: 1, name: 'Premium Oyster',          desc: 'Fresh wild-caught oysters, prized for their delicate flavor and briny essence.',                          img: 'https://lenden.com.au/static/images/shop3/abalone.jpg',              tag: 'Wild Caught' },
-  { id: 2, name: 'Local Lobster',           desc: 'Fresh live lobsters sourced daily, guaranteed freshness and quality.',                                     img: 'https://lenden.com.au/static/images/shop3/lobster.jpg',              tag: 'Live Fresh' },
-  { id: 3, name: 'Australian Wild Prawns',  desc: 'Wild-caught Australian prawns with exceptional flavor and sweetness.',                                    img: 'https://lenden.com.au/static/images/shop3/australian_wild_prawn.jpg', tag: 'Australian Wild' },
-  { id: 4, name: 'Premium Salmon',          desc: 'Fresh Atlantic salmon cuts, perfect for special occasions.',                                              img: 'https://lenden.com.au/static/images/shop3/salmon.jpg',               tag: 'Premium Cuts' },
-  { id: 5, name: 'Red Snapper',             desc: 'Carefully selected premium fish varieties, sustainably sourced.',                                         img: 'https://lenden.com.au/static/images/shop3/fish.jpg',                 tag: 'Sustainable' },
-  { id: 6, name: 'Premium Tuna Steak',      desc: 'Premium tuna steaks, sourced from the best suppliers.',                                                   img: 'https://lenden.com.au/static/images/shop3/tuna_steak.jpg',           tag: 'Sashimi Grade' },
+  { id: 1, name: 'Premium Oyster', desc: 'Fresh wild-caught oysters, prized for their delicate flavor and briny essence.', img: 'https://lenden.com.au/static/images/shop3/abalone.jpg', tag: 'Wild Caught' },
+  { id: 2, name: 'Local Lobster', desc: 'Fresh live lobsters sourced daily, guaranteed freshness and quality.', img: 'https://lenden.com.au/static/images/shop3/lobster.jpg', tag: 'Live Fresh' },
+  { id: 3, name: 'Australian Wild Prawns', desc: 'Wild-caught Australian prawns with exceptional flavor and sweetness.', img: 'https://lenden.com.au/static/images/shop3/australian_wild_prawn.jpg', tag: 'Australian Wild' },
+  { id: 4, name: 'Premium Salmon', desc: 'Fresh Atlantic salmon cuts, perfect for special occasions.', img: 'https://lenden.com.au/static/images/shop3/salmon.jpg', tag: 'Premium Cuts' },
+  { id: 5, name: 'Red Snapper', desc: 'Carefully selected premium fish varieties, sustainably sourced.', img: 'https://lenden.com.au/static/images/shop3/fish.jpg', tag: 'Sustainable' },
+  { id: 6, name: 'Premium Tuna Steak', desc: 'Premium tuna steaks, sourced from the best suppliers.', img: 'https://lenden.com.au/static/images/shop3/tuna_steak.jpg', tag: 'Sashimi Grade' },
 ];
 
 /* ── Features data ─────────────────────────────────────────── */
 const features = [
-  { id: 1, title: 'Luxury Quality',      desc: 'We source only the most exclusive premium seafood from trusted suppliers who share our commitment to luxury.',                    Icon: FaCrown },
-  { id: 2, title: 'Expert Curation',     desc: 'Our expert fishmongers select only the finest quality seafood, ensuring each product meets our exceptional standards.',            Icon: FaAward },
-  { id: 3, title: 'Custom Preparation',  desc: 'We can prepare your premium seafood exactly how you want it with our expert preparation services.',                               Icon: FaCut },
-  { id: 4, title: 'Personal Service',    desc: 'Our expert staff provides personalized consultation and preparation advice for your luxury dining experience.',                   Icon: FaUserTie },
-  { id: 5, title: 'Sustainable Luxury',  desc: 'We prioritize sustainably sourced premium seafood to support marine conservation and ethical practices.',                          Icon: FaFish },
-  { id: 6, title: 'Culinary Expertise',  desc: 'Our team offers expert cooking tips and gourmet recipe suggestions to elevate your culinary experience.',                         Icon: FaUtensils },
+  { id: 1, title: 'Luxury Quality', desc: 'We source only the most exclusive premium seafood from trusted suppliers who share our commitment to luxury.', Icon: FaCrown },
+  { id: 2, title: 'Expert Curation', desc: 'Our expert fishmongers select only the finest quality seafood, ensuring each product meets our exceptional standards.', Icon: FaAward },
+  { id: 3, title: 'Custom Preparation', desc: 'We can prepare your premium seafood exactly how you want it with our expert preparation services.', Icon: FaCut },
+  { id: 4, title: 'Personal Service', desc: 'Our expert staff provides personalized consultation and preparation advice for your luxury dining experience.', Icon: FaUserTie },
+  { id: 5, title: 'Sustainable Luxury', desc: 'We prioritize sustainably sourced premium seafood to support marine conservation and ethical practices.', Icon: FaFish },
+  { id: 6, title: 'Culinary Expertise', desc: 'Our team offers expert cooking tips and gourmet recipe suggestions to elevate your culinary experience.', Icon: FaUtensils },
 ];
 
 /* ── Framer variants ───────────────────────────────────────── */
-const fadeUp   = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22,1,0.36,1] } } };
-const stagger  = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
-const scaleIn  = { hidden: { opacity: 0, scale: 0.92 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.55, ease: 'easeOut' } } };
+const fadeUp: any = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } };
+const stagger: any = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
+const scaleIn: any = { hidden: { opacity: 0, scale: 0.92 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.55, ease: 'easeOut' } } };
 
 export default function PremiumPage() {
   return (
@@ -57,7 +57,7 @@ export default function PremiumPage() {
             <Link href="/poultry">Poultry Shop</Link>
             <Link href="/seafood">Seafood North Sydney</Link>
             <Link href="/premium" className={styles.navActive}>Seafood Northbridge</Link>
-            <Link href="/lenden-epicurean">
+            <Link href="/rotisserie">
               Lenden Rotisserie <span className={styles.openBadge}>NOW OPEN</span>
             </Link>
             <Link href="/" className={styles.homeBtn}>← Back to Home</Link>

@@ -11,7 +11,7 @@ const qualities = [
   { id: 6, title: 'Quality Assurance', desc: 'Rigorous quality checks at every step, ensuring you only get the best.', icon: '🛡️' },
 ];
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -19,13 +19,13 @@ const containerVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: any = {
   hidden: { opacity: 0, rotateY: 90, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
-    rotateY: 0, 
-    scale: 1, 
-    transition: { type: "spring", damping: 15, stiffness: 100 } 
+  visible: {
+    opacity: 1,
+    rotateY: 0,
+    scale: 1,
+    transition: { type: "spring", damping: 15, stiffness: 100 }
   }
 };
 
@@ -33,7 +33,7 @@ export default function PoultryQuality() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <motion.div 
+        <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,11 +41,11 @@ export default function PoultryQuality() {
           transition={{ duration: 0.6 }}
         >
           <span className={styles.badge}>WHY CHOOSE US</span>
-          <h2 className={styles.title}>Premium Quality<br/>Unmatched Experience</h2>
+          <h2 className={styles.title}>Premium Quality<br />Unmatched Experience</h2>
           <p className={styles.subtitle}>We are dedicated to bringing the finest quality meats with a commitment to sustainable and ethical farming.</p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className={styles.grid}
           variants={containerVariants}
           initial="hidden"

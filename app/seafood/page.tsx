@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import {
   MdShoppingCart, MdLocationOn, MdPhone, MdEmail, MdAccessTime,
   MdFavoriteBorder, MdStar, MdArrowForward, MdStore,
@@ -21,31 +21,31 @@ import styles from './seafood.module.css';
 
 /* ── Product data ──────────────────────────────────────────── */
 const products = [
-  { id: 1, name: 'Australian Salmon',  desc: 'Fresh, sustainably caught Australian Salmon, perfect for grilling or pan-searing.',           img: 'https://lenden.com.au/static/images/Lenden+Seafood_Australian+Salmon.jpg',  tag: 'Premium Grade' },
-  { id: 2, name: 'King Salmon',        desc: 'Premium King Salmon, perfect for sushi, sashimi, or gourmet cooking.',                      img: 'https://lenden.com.au/static/images/Lenden+Seafood_King+Salmon.jpg',        tag: 'Sashimi Grade' },
-  { id: 3, name: 'Barramundi',         desc: 'Fresh Australian Barramundi, known for its delicate flavor and firm white flesh.',           img: 'https://lenden.com.au/static/images/Lenden+Seafood_Barammundi.jpg',         tag: 'Fresh Catch' },
-  { id: 4, name: 'Blue Finn Cod',      desc: 'Premium Blue Finn Cod, perfect for fish and chips or gourmet seafood dishes.',              img: 'https://lenden.com.au/static/images/Lenden+Seafood_Blue+Finn+Cod.jpg',      tag: 'Premium Grade' },
-  { id: 5, name: 'Tuna Steak',         desc: 'Premium quality tuna steak, perfect for searing or sushi preparation.',                     img: 'https://lenden.com.au/static/images/Lenden+Seafood_Tuna+Steak.jpg',         tag: 'Sashimi Grade' },
-  { id: 6, name: 'Raw Prawns',         desc: 'Fresh Australian prawns, perfect for grilling, stir-frying, or seafood pasta.',             img: 'https://lenden.com.au/static/images/Lenden+Seafood_Raw+Prawns.jpg',         tag: 'Fresh Catch' },
-  { id: 7, name: 'Cooked Prawns',      desc: 'Perfectly cooked Australian prawns, ready to serve or use in your favorite dishes.',         img: 'https://lenden.com.au/static/images/Lenden+Seafood_Cooked+Prawns.jpg',      tag: 'Ready to Eat' },
-  { id: 8, name: 'Australian Lobster', desc: 'Premium Australian Lobster, perfect for special occasions and gourmet dining.',              img: 'https://lenden.com.au/static/images/Lenden+Seafood_Lobster.jpg',            tag: 'Premium Grade' },
-  { id: 9, name: 'Oysters',            desc: 'Fresh Australian oysters, shucked to order for the ultimate seafood experience.',            img: 'https://lenden.com.au/static/images/Lenden+Seafood_Oyster.jpg',             tag: 'Fresh Daily' },
+  { id: 1, name: 'Australian Salmon', desc: 'Fresh, sustainably caught Australian Salmon, perfect for grilling or pan-searing.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Australian+Salmon.jpg', tag: 'Premium Grade' },
+  { id: 2, name: 'King Salmon', desc: 'Premium King Salmon, perfect for sushi, sashimi, or gourmet cooking.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_King+Salmon.jpg', tag: 'Sashimi Grade' },
+  { id: 3, name: 'Barramundi', desc: 'Fresh Australian Barramundi, known for its delicate flavor and firm white flesh.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Barammundi.jpg', tag: 'Fresh Catch' },
+  { id: 4, name: 'Blue Finn Cod', desc: 'Premium Blue Finn Cod, perfect for fish and chips or gourmet seafood dishes.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Blue+Finn+Cod.jpg', tag: 'Premium Grade' },
+  { id: 5, name: 'Tuna Steak', desc: 'Premium quality tuna steak, perfect for searing or sushi preparation.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Tuna+Steak.jpg', tag: 'Sashimi Grade' },
+  { id: 6, name: 'Raw Prawns', desc: 'Fresh Australian prawns, perfect for grilling, stir-frying, or seafood pasta.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Raw+Prawns.jpg', tag: 'Fresh Catch' },
+  { id: 7, name: 'Cooked Prawns', desc: 'Perfectly cooked Australian prawns, ready to serve or use in your favorite dishes.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Cooked+Prawns.jpg', tag: 'Ready to Eat' },
+  { id: 8, name: 'Australian Lobster', desc: 'Premium Australian Lobster, perfect for special occasions and gourmet dining.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Lobster.jpg', tag: 'Premium Grade' },
+  { id: 9, name: 'Oysters', desc: 'Fresh Australian oysters, shucked to order for the ultimate seafood experience.', img: 'https://lenden.com.au/static/images/Lenden+Seafood_Oyster.jpg', tag: 'Fresh Daily' },
 ];
 
 /* ── "Why Choose Us" features ──────────────────────────────── */
 const features = [
-  { id: 1, title: 'Ocean Fresh',        desc: 'Our seafood is delivered daily, ensuring you get the freshest catch possible with optimal flavor and quality.',                          Icon: IoWaterOutline },
-  { id: 2, title: 'Sustainably Sourced',desc: 'We partner with fisheries committed to sustainable practices that protect our marine ecosystems for future generations.',              Icon: FaLeaf },
-  { id: 3, title: 'Expert Selection',   desc: 'Our expert fishmongers select only the finest quality seafood, ensuring each product meets our high standards.',                       Icon: FaFish },
-  { id: 4, title: 'Custom Preparation', desc: 'We can fillet, scale, debone, or prepare your seafood exactly how you want it for your convenience.',                                 Icon: FaCut },
-  { id: 5, title: 'Local Sourcing',     desc: 'We prioritize Australian seafood to support local fishing communities and reduce our carbon footprint.',                               Icon: MdLocationOn },
-  { id: 6, title: 'Cooking Advice',     desc: 'Our team offers expert cooking tips and recipe suggestions to help you make the most of your seafood.',                                Icon: FaUtensils },
+  { id: 1, title: 'Ocean Fresh', desc: 'Our seafood is delivered daily, ensuring you get the freshest catch possible with optimal flavor and quality.', Icon: IoWaterOutline },
+  { id: 2, title: 'Sustainably Sourced', desc: 'We partner with fisheries committed to sustainable practices that protect our marine ecosystems for future generations.', Icon: FaLeaf },
+  { id: 3, title: 'Expert Selection', desc: 'Our expert fishmongers select only the finest quality seafood, ensuring each product meets our high standards.', Icon: FaFish },
+  { id: 4, title: 'Custom Preparation', desc: 'We can fillet, scale, debone, or prepare your seafood exactly how you want it for your convenience.', Icon: FaCut },
+  { id: 5, title: 'Local Sourcing', desc: 'We prioritize Australian seafood to support local fishing communities and reduce our carbon footprint.', Icon: MdLocationOn },
+  { id: 6, title: 'Cooking Advice', desc: 'Our team offers expert cooking tips and recipe suggestions to help you make the most of your seafood.', Icon: FaUtensils },
 ];
 
 /* ── Framer variants ───────────────────────────────────────── */
-const fadeUp   = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22,1,0.36,1] } } };
-const stagger  = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
-const scaleIn  = { hidden: { opacity: 0, scale: 0.92 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.55, ease: 'easeOut' } } };
+const fadeUp: any = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } };
+const stagger: any = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
+const scaleIn: any = { hidden: { opacity: 0, scale: 0.92 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.55, ease: 'easeOut' } } };
 
 export default function SeafoodPage() {
   return (
@@ -66,8 +66,8 @@ export default function SeafoodPage() {
             <Link href="/">Home</Link>
             <Link href="/poultry">Poultry Shop</Link>
             <Link href="/seafood" className={styles.navActive}>Seafood North Sydney</Link>
-            <Link href="/seafood-meats">Seafood Northbridge</Link>
-            <Link href="/lenden-epicurean">
+            <Link href="/premium">Seafood Northbridge</Link>
+            <Link href="/rotisserie">
               Lenden Rotisserie <span className={styles.openBadge}>NOW OPEN</span>
             </Link>
             <Link href="/" className={styles.homeBtn}>

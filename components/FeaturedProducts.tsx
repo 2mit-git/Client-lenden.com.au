@@ -76,10 +76,12 @@ const slides = [
 ];
 
 /* ── Framer variants ─────────────────────────────────────── */
-const slideVariants = {
+import { Variants } from 'framer-motion';
+
+const slideVariants: Variants = {
   enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 60 : -60 }),
-  center: { opacity: 1, x: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
-  exit:  (dir: number) => ({ opacity: 0, x: dir > 0 ? -60 : 60, transition: { duration: 0.3 } }),
+  center: { opacity: 1, x: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const } },
+  exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -60 : 60, transition: { duration: 0.3 } }),
 };
 
 /* ── Stars helper ────────────────────────────────────────── */

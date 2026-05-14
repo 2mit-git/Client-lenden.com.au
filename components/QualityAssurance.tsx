@@ -4,37 +4,37 @@ import { MdLocalFlorist, MdRecycling, MdOutlineVerified, MdOutlineTrackChanges }
 import styles from './QualityAssurance.module.css';
 
 const features = [
-  { id: 1, title: 'Freshness',      desc: 'We source daily to ensure the highest quality produce reaches your table.',      Icon: MdLocalFlorist },
-  { id: 2, title: 'Sustainability', desc: 'Working with ethical farms committed to environmental stewardship.',              Icon: MdRecycling },
-  { id: 3, title: 'Expertise',      desc: 'Our master butchers and fishmongers bring decades of experience.',               Icon: MdOutlineVerified },
-  { id: 4, title: 'Traceability',   desc: 'Know exactly where your food comes from with our transparent sourcing.',         Icon: MdOutlineTrackChanges },
+  { id: 1, title: 'Freshness', desc: 'We source daily to ensure the highest quality produce reaches your table.', Icon: MdLocalFlorist },
+  { id: 2, title: 'Sustainability', desc: 'Working with ethical farms committed to environmental stewardship.', Icon: MdRecycling },
+  { id: 3, title: 'Expertise', desc: 'Our master butchers and fishmongers bring decades of experience.', Icon: MdOutlineVerified },
+  { id: 4, title: 'Traceability', desc: 'Know exactly where your food comes from with our transparent sourcing.', Icon: MdOutlineTrackChanges },
 ];
 
 /* ── Variants ─────────────────────────────────────────────── */
 
-const headerVariants = {
-  hidden:   { opacity: 0, y: 30 },
-  visible:  { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] } },
+const headerVariants: any = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const containerVariants = {
-  hidden:   {},
-  visible:  { transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+const containerVariants: any = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
 };
 
 // each card: slides up + fades in
-const cardVariants = {
-  hidden:   { opacity: 0, y: 50, scale: 0.94 },
-  visible:  {
+const cardVariants: any = {
+  hidden: { opacity: 0, y: 50, scale: 0.94 },
+  visible: {
     opacity: 1, y: 0, scale: 1,
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
 // icon: bounces in after card
-const iconVariants = {
-  hidden:   { scale: 0, rotate: -20 },
-  visible:  {
+const iconVariants: any = {
+  hidden: { scale: 0, rotate: -20 },
+  visible: {
     scale: 1, rotate: 0,
     transition: { type: 'spring', stiffness: 260, damping: 18, delay: 0.15 },
   },

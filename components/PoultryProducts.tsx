@@ -14,7 +14,7 @@ const products = [
   { id: 9, name: 'Whole BBQ Chicken', desc: 'Our freshly roasted BBQ chicken, available to take home.' },
 ];
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -22,13 +22,13 @@ const containerVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: any = {
   hidden: { opacity: 0, y: 50, rotateX: -15 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
+  visible: {
+    opacity: 1,
+    y: 0,
     rotateX: 0,
-    transition: { type: "spring", stiffness: 100, damping: 12 } 
+    transition: { type: "spring", stiffness: 100, damping: 12 }
   }
 };
 
@@ -36,7 +36,7 @@ export default function PoultryProducts() {
   return (
     <section className={`section-padding ${styles.section}`}>
       <div className="container">
-        <motion.div 
+        <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function PoultryProducts() {
           <p className={styles.subtitle}>Discover our wide range of premium meats, carefully selected to ensure the best quality for your culinary needs.</p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className={styles.grid}
           variants={containerVariants}
           initial="hidden"
