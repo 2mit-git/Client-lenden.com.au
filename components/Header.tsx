@@ -49,7 +49,7 @@ export default function Header() {
             <Image src="/logo.png" alt="Lenden Logo" width={32} height={32} />Lenden
           </Link>
         </div>
-        
+
         {/* Desktop Nav */}
         <nav className={`${styles.nav} ${styles.desktopNav}`}>
           <Link href="/" className={styles.active}>Home</Link>
@@ -62,9 +62,9 @@ export default function Header() {
           <Link href="/rotisserie" className={styles.highlight}>
             Lenden Rotisserie <span className={styles.popularBadge}>NOW OPEN</span>
           </Link>
-          <Link href="/#about">About Us</Link>
+          {/* <Link href="/#about">About Us</Link>
           <Link href="/#quality">Quality</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/#contact">Contact</Link> */}
         </nav>
 
         <div className={`${styles.actions} ${styles.desktopActions}`}>
@@ -133,13 +133,13 @@ export default function Header() {
               <Link href="/#about" onClick={toggleMobileMenu}>About Us</Link>
               <Link href="/#quality" onClick={toggleMobileMenu}>Quality</Link>
               <Link href="/#contact" onClick={toggleMobileMenu}>Contact</Link>
-              
+
               <div className={styles.mobileThemeSection}>
                 <div className={styles.mobileThemeHeader}>🎨 Select Theme</div>
                 <div className={styles.mobileThemeGrid}>
                   {Object.entries(themes).map(([key, theme]) => (
-                    <button 
-                      key={key} 
+                    <button
+                      key={key}
                       className={`${styles.mobileThemeOption} ${activeTheme === key ? styles.activeMobileThemeOption : ''}`}
                       onClick={() => handleThemeSelect(key as ThemeKey)}
                     >
